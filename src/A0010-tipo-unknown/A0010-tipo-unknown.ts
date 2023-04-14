@@ -9,5 +9,8 @@ const y = 800;
 
 // console.log(x + y);
 
-if (typeof x === 'number') console.log(x + y);
-console.log('Precisa ser um numero');
+if (typeof x !== 'number') {
+  console.log('Precisa ser um numero');
+} else {
+  console.log(x + y);
+}
