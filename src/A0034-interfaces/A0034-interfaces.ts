@@ -1,22 +1,22 @@
-// type TipoPessoa = {
+// interface TipoPessoa {
 //   nome: string;
 //   sobrenome: string;
 //   nomeCompleto: () => string;
-// };
+// }
 
-type TipoNome = {
+interface TipoNome {
   nome: string;
-};
+}
 
-type TipoSobrenome = {
+interface TipoSobrenome {
   sobrenome: string;
-};
+}
 
-type TipoNomeCompleto = {
+interface TipoNomeCompleto {
   nomeCompleto: () => string;
-};
+}
 
-type TipoPessoa = TipoNome & TipoSobrenome & TipoNomeCompleto;
+interface TipoPessoa extends TipoNome, TipoSobrenome, TipoNomeCompleto {}
 
 // export class Pessoa implements TipoNome, TipoSobrenome, TipoNomeCompleto {
 //   constructor(public nome: string, public sobrenome: string) {}
