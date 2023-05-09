@@ -8,7 +8,7 @@ const coresObj = {
   roxo: 'puble',
 };
 
-function traduzirCor(cor: CoresChaves, cores: CoresObj) {
+export function traduzirCor(cor: CoresChaves, cores: CoresObj) {
   return cores[cor];
 }
 
