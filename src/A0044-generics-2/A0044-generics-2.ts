@@ -1,17 +1,31 @@
-const arrayNumeros: Array<number> = [1, 2, 3, 4, 5, 6];
-console.log(arrayNumeros);
-
-async function promiseAsync() {
-  return 1;
+interface PessoaProtocolo<T = string, U = number> {
+  nome: T;
+  sobrenome: T;
+  idade: U;
 }
 
-function minhaPromise(): Promise<number> {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(1);
-    }, 1000);
-  });
-}
+// type PessoaProtocolo2<T = string, U = number> = {
+//   nome: T;
+//   sobrenome: T;
+//   idade: U;
+// };
 
-promiseAsync().then((resultado) => console.log(resultado + 1));
-minhaPromise().then((resultado) => console.log(resultado + 1));
+const aluno1: PessoaProtocolo<string, number> = {
+  nome: 'Luiz',
+  sobrenome: 'Miranda',
+  idade: 30,
+};
+
+const aluno2: PessoaProtocolo<number, number> = {
+  nome: 1234,
+  sobrenome: 12345,
+  idade: 30,
+};
+
+const aluno3: PessoaProtocolo = {
+  nome: 'Luiz',
+  sobrenome: 'Miranda',
+  idade: 30,
+};
+
+console.log(aluno1, aluno2, aluno3);
